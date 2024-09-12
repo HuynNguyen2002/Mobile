@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1089063236939",
+    "project_id": "shopmobile-e48ee",
+    "storage_bucket": "shopmobile-e48ee.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1089063236939:android:b11c847204ea77587ee4ce",
+        "android_client_info": {
+          "package_name": "com.example.shop"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBCUrVXEEMJ6f6XQDBtA9_omcMCCN1oG94"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
