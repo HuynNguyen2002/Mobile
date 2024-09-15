@@ -26,12 +26,10 @@ public class IntroActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 try {
-                    // Chuyển đến LoginActivity khi người dùng nhấn nút
                     Intent intent = new Intent(IntroActivity.this, LoginActivity.class);
                     startActivity(intent);
                     Log.d("IntroActivity", "LoginActivity started successfully");
                 } catch (Exception e) {
-                    // Ghi log nếu có lỗi khi khởi động LoginActivity
                     Log.e("IntroActivity", "Error starting LoginActivity", e);
                 }
             }
