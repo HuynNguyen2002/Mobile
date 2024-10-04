@@ -13,14 +13,14 @@ import androidx.core.view.WindowInsetsCompat;
 
 import com.example.shop.R;
 
-public class RegisterActivity extends AppCompatActivity {
+public class SlashScreen_Activity extends AppCompatActivity {
 
     @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
-        setContentView(R.layout.activity_register);
+        setContentView(R.layout.activity_slash_screen);
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
