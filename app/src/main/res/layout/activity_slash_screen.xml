@@ -47,6 +47,7 @@
     <LinearLayout
         android:id="@+id/constraintLayout"
         android:layout_width="match_parent"
+        android:layout_below ="@+id/button"
         android:layout_height="match_parent"
         android:alpha="0.4"
         android:background="@drawable/bgr_splash_screen"
