@@ -112,6 +112,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_gravity="center_horizontal"
+                        android:scaleType="centerCrop"
                         android:src="@drawable/menu_monsoi" />
 
                     <FrameLayout
@@ -154,6 +155,7 @@
                 app:cardElevation="8dp">
 
                 <FrameLayout
+                    android:id="@+id/famelt_banhcuon"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_gravity="center_horizontal|center_vertical"
@@ -163,10 +165,11 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_gravity="center_horizontal"
+                        android:scaleType="centerCrop"
                         android:src="@drawable/menu_order_banhcuon" />
 
                     <FrameLayout
-                        android:id="@+id/famelt_banhcuon"
+                        android:id="@+id/famelt_banhcuond"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_gravity="bottom"
@@ -211,6 +214,7 @@
                     android:orientation="vertical">
 
                     <ImageView
+                        android:scaleType="centerCrop"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_gravity="center_horizontal"
@@ -262,6 +266,7 @@
                     android:orientation="vertical">
 
                     <ImageView
+                        android:scaleType="centerCrop"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_gravity="center_horizontal"
@@ -313,6 +318,7 @@
                     android:orientation="vertical">
 
                     <ImageView
+                        android:scaleType="centerCrop"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_gravity="center_horizontal"
@@ -364,6 +370,7 @@
                     android:orientation="vertical">
 
                     <ImageView
+                        android:scaleType="centerCrop"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_gravity="center_horizontal"
@@ -415,6 +422,7 @@
                     android:orientation="vertical">
 
                     <ImageView
+                        android:scaleType="centerCrop"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_gravity="center_horizontal"
@@ -466,6 +474,7 @@
                     android:orientation="vertical">
 
                     <ImageView
+                        android:scaleType="centerCrop"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_gravity="center_horizontal"
