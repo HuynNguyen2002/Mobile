@@ -3,12 +3,17 @@ package fragment_ngv;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentStatePagerAdapter;
+import androidx.viewpager.widget.ViewPager;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
 import com.example.shop.R;
+import com.google.android.material.tabs.TabLayout;
+
+import Home.Home_ViewPageApdate;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -25,6 +30,11 @@ public class HomeFragment extends Fragment {
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
+
+    // Khai báo Home ViewPage và Tablayout và view
+    private ViewPager homeviewpage;
+    private TabLayout hometablayout;
+    private View view;
 
     public HomeFragment() {
         // Required empty public constructor
@@ -61,6 +71,15 @@ public class HomeFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_home, container, false);
+        view = inflater.inflate(R.layout.fragment_home, container, false);
+
+        hometablayout = (TabLayout)  view.findViewById(R.id.home_tablayout);
+        homeviewpage = (ViewPager) view.findViewById(R.id.home_viewpage);
+        Home_ViewPageApdate home_apdater = new Home_ViewPageApdate(getChildFragmentManager(), FragmentStatePagerAdapter.BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT);
+        homeviewpage.setAdapter(home_apdater);
+
+        hometablayout.setupWithViewPager(homeviewpage);
+
+        return view;
     }
 }
