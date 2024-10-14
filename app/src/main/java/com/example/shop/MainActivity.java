@@ -1,6 +1,9 @@
 package com.example.shop;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
@@ -9,8 +12,10 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
-public class MainActivity extends AppCompatActivity {
+import Nagigationkey.Nagigationkey;
 
+public class MainActivity extends AppCompatActivity {
+    Button btn;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -22,5 +27,12 @@ public class MainActivity extends AppCompatActivity {
             TextView welcomeTextView = findViewById(R.id.textView); // Assuming you have a TextView with this ID
             welcomeTextView.setText("Welcome, " + username + "!");
         }
+        btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent it = new Intent(MainActivity.this, Nagigationkey.class);
+                startActivity(it);
+            }
+        });
     }
 }

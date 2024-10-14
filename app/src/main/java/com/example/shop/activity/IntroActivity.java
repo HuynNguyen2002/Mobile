@@ -11,6 +11,8 @@ import com.example.shop.R;
 import com.example.shop.activity.LoginActivity;
 import com.example.shop.databinding.ActivityIntroBinding;
 
+import Nagigationkey.Nagigationkey;
+
 public class IntroActivity extends AppCompatActivity {
     private ActivityIntroBinding binding;
 
@@ -26,7 +28,7 @@ public class IntroActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 try {
-                    Intent intent = new Intent(IntroActivity.this, LoginActivity.class);
+                    Intent intent = new Intent(IntroActivity.this, Nagigationkey.class);
                     startActivity(intent);
                     Log.d("IntroActivity", "LoginActivity started successfully");
                 } catch (Exception e) {
