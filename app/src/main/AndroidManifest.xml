@@ -13,16 +13,25 @@
         android:theme="@style/Theme.Shop"
         tools:targetApi="31">
         <activity
-            android:name=".view.DetailActivity"
+            android:name="Order.detailhistory_Activity"
+            android:exported="false" />
+        <activity
+            android:name="Order.History_order_Activity"
+            android:exported="false" />
+        <activity
+            android:name="Account.UserAccount_Activity"
+            android:exported="false" />
+        <activity
+            android:name="Account.UseraccountActivity"
+            android:exported="false" />
+        <activity
+            android:name="Book.Book_CartActivity"
             android:exported="false" />
         <activity
             android:name="Category.Category_banh_cuon"
             android:exported="false" />
         <activity
             android:name="Nagigationkey.Nagigationkey"
-            android:exported="false" />
-        <activity
-            android:name=".activity.SlashScreen_Activity"
             android:exported="false" />
         <activity
             android:name=".view.CategoryActivity"
@@ -32,7 +41,7 @@
             android:exported="false" />
         <activity
             android:name=".activity.LoginActivity"
-            android:exported="true" />
+            android:exported="false" />
         <activity
             android:name=".activity.IntroActivity"
             android:exported="true">
