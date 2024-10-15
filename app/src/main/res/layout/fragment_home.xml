@@ -89,20 +89,20 @@
 
         android:src="@drawable/quangcaoga" />
     </androidx.cardview.widget.CardView>
+
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_weight="11"
-        android:layout_height="0dp">
+        android:layout_height="0dp"
+        android:layout_weight="12.8">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical" >
+            android:orientation="vertical">
 
             <ScrollView
                 android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="6"
+                android:layout_height="wrap_content"
                 android:fillViewport="true">
 
                 <LinearLayout

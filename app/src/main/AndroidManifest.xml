@@ -13,6 +13,9 @@
         android:theme="@style/Theme.Shop"
         tools:targetApi="31">
         <activity
+            android:name="Book.Book_CartActivity"
+            android:exported="false" />
+        <activity
             android:name="Category.Category_banh_cuon"
             android:exported="false" />
         <activity
