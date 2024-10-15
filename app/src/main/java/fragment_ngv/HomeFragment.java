@@ -3,7 +3,6 @@ package fragment_ngv;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentStatePagerAdapter;
 import androidx.viewpager.widget.ViewPager;
 
 import android.view.LayoutInflater;
@@ -12,8 +11,6 @@ import android.view.ViewGroup;
 
 import com.example.shop.R;
 import com.google.android.material.tabs.TabLayout;
-
-import Home.Home_ViewPageApdate;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -71,15 +68,6 @@ public class HomeFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        view = inflater.inflate(R.layout.fragment_home, container, false);
-
-        hometablayout = (TabLayout)  view.findViewById(R.id.home_tablayout);
-        homeviewpage = (ViewPager) view.findViewById(R.id.home_viewpage);
-        Home_ViewPageApdate home_apdater = new Home_ViewPageApdate(getChildFragmentManager(), FragmentStatePagerAdapter.BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT);
-        homeviewpage.setAdapter(home_apdater);
-
-        hometablayout.setupWithViewPager(homeviewpage);
-
-        return view;
+        return inflater.inflate(R.layout.fragment_home, container, false);
     }
 }
