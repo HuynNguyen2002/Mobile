@@ -4,7 +4,10 @@ import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -13,6 +16,12 @@ import android.widget.Toast;
 
 import com.example.shop.R;
 import com.example.shop.view.CategoryActivity;
+import com.example.shop.view.CategoryAdapter;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import Category.Category;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -20,6 +29,10 @@ import com.example.shop.view.CategoryActivity;
  * create an instance of this fragment.
  */
 public class OrderFragment extends Fragment {
+
+    private RecyclerView recyclerViewCategories;
+    private CategoryAdapter categoryAdapter;
+    private List<Category> categoryList;
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -67,17 +80,23 @@ public class OrderFragment extends Fragment {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_order, container, false);
 
-        FrameLayout frameLayout = view.findViewById(R.id.famelt_banhcuon);
+        recyclerViewCategories = view.findViewById(R.id.recyclerViewCategories);
+        recyclerViewCategories.setLayoutManager(new LinearLayoutManager(getContext()));
 
-        frameLayout.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Toast.makeText(getContext(), "FrameLayout clicked!", Toast.LENGTH_SHORT).show();
+        // Tạo danh sách category giả lập
+        List<Category> categoryList = new ArrayList<>();
+        categoryList.add(new Category("Các món sợi", R.drawable.category_banhcuon));
+        categoryList.add(new Category("Bánh cuốn", R.drawable.menu_order_banhcuon));
+        categoryList.add(new Category("Hải sản & Cá", R.drawable.menu_order_haisanca));
+        categoryList.add(new Category("Gà, Bò, Heo", R.drawable.menu_order_bogaheo));
+        categoryList.add(new Category("Cơm, súp, cháo", R.drawable.menu_order_cschao));
+        categoryList.add(new Category("Tráng miệng", R.drawable.menu_order_trangmieng));
+        categoryList.add(new Category("Lẩu", R.drawable.menu_order_lau));
 
-                Intent intent = new Intent(getActivity(), CategoryActivity.class);
-                startActivity(intent);
-            }
-        });
+        // Kết nối với Adapter
+        CategoryAdapter categoryAdapter = new CategoryAdapter(getContext(),categoryList);
+        recyclerViewCategories.setAdapter(categoryAdapter);
+
         return view;
     }
 }
